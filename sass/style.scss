@@ -127,11 +127,27 @@ q {
 	font-style: italic;
 }
 
+footer {
+	padding: calc(#{$side_margin_outer} / 2);
+	
+	h1 {
+		margin: 0;
+		font-size: 0.5em;
+	}
+}
+
 /*
 * ========
 * SITEWIDE
 * ========
 */
+
+.body-content {
+	background-color: #ffffff;
+	min-height: 100vh;
+}
+
+
 
 
 .button-cta > .email-cta {
@@ -291,6 +307,15 @@ address {
 * ========
 */
 
+/* HOMEPAGE */
+
+/* Buy music club */
+#buy-music-club {
+	margin:0 auto;
+	padding-top: 10vh;
+	width: 50%;
+}
+
 .container-contrast {
 	background-color: $background_color_contrast;
 }
@@ -311,37 +336,6 @@ address {
 .container-project-description {
 }
 
-/* Project Images */
-.container-project-image {
-	object-fit: cover;
-	width: 100%;
-	min-width: 250px;
-
-	margin: 0 auto;
-}
-
-#image-granular-synthesizer {
-	max-height: 384px;
-	max-width: 727px;
-
-	content: url("images/granular-synthesizer.png");
-}
-
-#image-hardware-step-sequencer {
-	max-height: 385px;
-	max-width: 1078px;
-
-	content: url("images/hardware-step-sequencer.png");
-}
-
-#image-super-map-control {
-	max-height: 386px;
-	max-width: 707px;
-
-	content: url("images/super-map-control.png");
-
-}
-
 /* Media Queries */
 @media (max-width: 575.98px) { 
 
@@ -349,6 +343,12 @@ address {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+	#buy-music-club {
+		padding-top: $side_margin_outer;
+		margin: $side_margin_outer auto;
+		width: calc(100vw - #{$side_margin_outer});
+	}
 	.heading-site-title {
 	    font-size: calc(12px + 20vw);
 	}
